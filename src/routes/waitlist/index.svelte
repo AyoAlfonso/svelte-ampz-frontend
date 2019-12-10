@@ -196,7 +196,6 @@
                 <div class="content">
                     <div class="form">
                          
-       
           {#if stage == 1}
       
                         <h3 style="margin-top: -5px;" class="title">Select Profile</h3>
