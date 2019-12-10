@@ -15,7 +15,7 @@
       padding: 0 70px; } }
   @media screen and (max-width: 600px) {
     .nav {
-      padding: 0 30px; } }
+      padding: 20px 30px; } }
   .nav .menu-btn {
     display: none;
     color: #fff;
@@ -173,7 +173,7 @@ html, body {
     width: 100%; }
     .opportunities .header .overlay .header-content {
       width: 100%;
-      padding: 0 150px; }
+      padding: 80px 150px;}
       @media screen and (max-width: 992px) {
         .opportunities .header .overlay .header-content {
           padding: 100px; } }

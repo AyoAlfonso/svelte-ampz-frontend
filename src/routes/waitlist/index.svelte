@@ -6,6 +6,8 @@
     import { onMount, afterUpdate } from "svelte";
     
     let inProgress = false;
+    let stage = 1;
+
     let talent_bg = '#ffeaea';
     let scout_bg = '#e6fae6';
     let coach_bg = '#fff5dc';
@@ -14,6 +16,7 @@
     let centerPageInfo = `We are currently in Beta Test and can't wait to have you on-board. Be the first to know when we roll-out.`
     let centerPageWarning = `By completing the short form below, you agree to receive electronic notifications from AMPZ.`
     let sports;
+
 
     const toast = new Toast()
 
@@ -54,10 +57,7 @@
         }
     }
 
-
   	function enter(e) {
-        console.log(e.target.id)
-        // hovering = true;
         if(!form.profile){
             if(e.target.id == 'grp_talent') { talent_bg =  "#ef7f7f"}
             if(e.target.id == 'grp_scout') { scout_bg ='#9fef9f'}
@@ -67,7 +67,6 @@
 
 	function leave(e) {
         hovering = false;
-             console.log(form.profile)
         if(!form.profile){
             if(e.target.id == 'grp_talent') { talent_bg =  "#ffeaea"}
             if(e.target.id == 'grp_scout') { scout_bg ='#e6fae6'}
@@ -114,8 +113,6 @@
         }
     
     if(!errorState){error.message = ''}
-
-
     if(!errorState){
         inProgress = true
         let opts = {position: 'top-center', duration: 3000}
@@ -131,11 +128,6 @@
         }
     
    }
-
-   let stage = 1;
-   
- 
-
 
 </script>
 
@@ -160,30 +152,43 @@
     color: #565F62
 }
 
-.center-page-warning-x2{
+.center-page-warning-x2 {
         color: #DB9A02;
         font-size: 12px;
         margin: 40px 20%;
         font-weight: 400;
         text-align: center;
     }
-
+.nav-items li a {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    line-height: 15px;
+    position: relative;
+    z-index: 1;
+}
+.nav-items li a.btn {
+  
+}
 </style>
 
 <main>
-
    <div class="wrapper new-opportunity">
                 <div class="nav">
                     <a href="go" class="brand-logo">
                     <img src="img/logo.png" alt="AMPZ">
                     </a>
                     <ul class="nav-items">
-                        <li><a href="go">About</a></li>
-                        <li><a href="go">Products</a></li>
-                        <li class="active"><a href="go">Opportunities</a></li>
-                        <li><a href="go">Contact</a></li>
-                        <li><a href="go">Blog</a></li>
-                        <li><a href="go" class="btn">Get Started</a></li>
+                        <li><a href="about-ampz">About Us</a></li>
+                        <li><a href="product">Products</a></li>
+                        <li><a href="opportunities">Opportunities</a></li>
+                        <li><a href="opportunities/new">Add Opportunity</a></li>
+                        <!-- <li><a href="go">Contact</a></li> -->
+                        <li><a href="waitlist">waitlist</a></li>
+                        <li><a href="waitlist" class="btn">Get Started</a></li>
                     </ul>
                     <i class="material-icons menu-btn">menu</i>
                 </div>

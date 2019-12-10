@@ -18,19 +18,7 @@
         sport: '',
     }
 
-    function handleSelect(e) {
-        if(e.target){
-            // if(e.target.id == 'talent') { form.profile = 'talent'}
-            // if(e.target.id == 'scout') { form.profile  ='scout'}
-            // if(e.target.id == 'coach') { form.profile ='coach'}
-            // stage = 2
-        }
-    }
-
-
   	function enter(e) {
-        console.log(e.target.id)
-        // hovering = true;
         if(!form.profile){
             if(e.target.id == 'grp_talent') { talent_bg =  "#ef7f7f"}
             if(e.target.id == 'grp_scout') { scout_bg ='#9fef9f'}
@@ -40,7 +28,6 @@
 
 	function leave(e) {
         hovering = false;
-             console.log(form.profile)
         if(!form.profile){
             if(e.target.id == 'grp_talent') { talent_bg =  "#ffeaea"}
             if(e.target.id == 'grp_scout') { scout_bg ='#e6fae6'}
@@ -50,17 +37,13 @@
     }
 
     function simpleDate(ISOdateTime){
-    //     let date = new Date(ISOdateTime);
-    //    return date.toISOString().substring(0, 10);
-       return ISOdateTime.split("T")[0]
+       return ISOdateTime.split("T")[0];
     }
 
 	onMount(async () => {
-  
+
 		inProgress = true;
         const opportunitiesRes =  await get("opportunity/list", form , null)
-        console.log(opportunitiesRes)
-   
         if(opportunitiesRes) {
             inProgress = false;
             opportunities = opportunitiesRes.data;
@@ -69,8 +52,6 @@
                opp.program_date = simpleDate(opp.program_date) 
             return opp
             }) : []
-            // console.log(opportunities)
-            // sports.map((sportsObj) => {sportsObj.label = sportsObj.name})
         }
         inProgress = false;
     })
@@ -79,16 +60,12 @@
         scrollToTopPage()
     });
 
-
     function scrollToTopPage(){
           window.scrollTo({ top: 0, behavior: 'smooth' })
-              setTimeout(function() {
-                //  error.message = '';
-              }, 1500);
+        setTimeout(function() { }, 1500);
     }
 
    async function submitSearch() {
-    
         inProgress = true
         let opts = {position: 'top-center', duration: 3000}
         const res =  await get("opportunity/list", form, null)
@@ -100,30 +77,51 @@
              opp.program_date = simpleDate(opp.program_date) 
             }) : []
 
-        }else {
+        } else {
             inProgress = false
             toast.error('Error adding' ,opts)
          }
    }
 
 </script>
+<style>
+.white-bg-8 {
+   background-color: #fff;
+}
+
+.nav-items li a {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    line-height: 15px;
+    position: relative;
+    z-index: 1;
+}
+.nav-items li a.btn {
+  
+}
 
 
-<main>
+</style>
+<main class="white-bg-8">
     <div class="wrapper opportunities">
         <div class="header">
             <div class="overlay">
                 <div class="nav">
-                    <a href="/go" class="brand-logo">
+                    <a href="/" class="brand-logo">
                         <img alt="image6" src="img/logo.png">
                     </a>
                     <ul class="nav-items">
-                        <li><a href="/go">About</a></li>
-                        <li><a href="/go">Products</a></li>
-                        <li class="active"><a href="/go">Opportunities</a></li>
-                        <li><a href="/go">Contact</a></li>
-                        <li><a href="/go">Blog</a></li>
-                        <li><a href="/go" class="btn">Get Started</a></li>
+                     <li><a href="about-ampz">About Us</a></li>
+                         <li><a href="product">Products</a></li>
+                        <li class="active"><a href="opportunities">Opportunities</a></li>
+                        <li><a href="opportunities/new">Add Opportunity</a></li>
+                        <!-- <li><a href="go">Contact</a></li> -->
+                        <li><a href="waitlist">Waitlist</a></li>
+                        <li><a href="waitlist" class="btn">Get Started</a></li>
                     </ul>
                     <i class="material-icons menu-btn">menu</i>
                 </div>
@@ -178,9 +176,7 @@
             </div>
             {/each}
             {/if}
-        
-
-        </div>
+     </div>
         <div class="pagination">
             <img alt="image7" src="img/arrow_right.png">
             <p>Previous</p>
@@ -195,7 +191,7 @@
             <div class="overlay">
                 <h3>Create Opportunities.</h3>
                 <h5>Are you scouting or running a development programme? Reach more talents by sharing your opportunities with us.</h5>
-                <a href="/go" class="btn">Create</a>
+                <a href="/opportunities/new" class="btn">Create</a>
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "run-p watch:tailwind sapper:dev",
-    "sapper:dev": "sapper dev --port 4601",
+    "sapper:dev": "sapper dev --port 4602",
     "export": "sapper export --legacy",
     "start": "PORT=4400 node __sapper__/build",
     "cy:run": "cypress run",

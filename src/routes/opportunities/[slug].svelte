@@ -1,18 +1,45 @@
+
+
+<script> 
+
+
+</script>
+
+<style>
+.nav-items li a {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    line-height: 15px;
+    position: relative;
+    z-index: 1;
+}
+.nav-items li a.btn {
+  
+}
+
+</style>
+
+<main>
 <div class="wrapper opportunity">
-    <div class="nav">
-        <a href="go" class="brand-logo">
-            <img src="img/logo.png" alt="AMPZ">
-        </a>
-        <ul class="nav-items">
-            <li><a href="go">About</a></li>
-            <li><a href="go">Products</a></li>
-            <li class="active"><a href="go">Opportunities</a></li>
-            <li><a href="go">Contact</a></li>
-            <li><a href="go">Blog</a></li>
-            <li><a href="go" class="btn">Get Started</a></li>
-        </ul>
-        <i class="material-icons menu-btn">menu</i>
-    </div>
+   <div class="nav">
+                    <a href="go" class="brand-logo">
+                    <img src="img/logo.png" alt="AMPZ">
+                    </a>
+                    <ul class="nav-items">
+                        <li><a href="about-ampz">About Us</a></li>
+                        <li><a href="products">Products</a></li>
+                        <li><a href="opportunities">Opportunities</a></li>
+                        <li><a href="opportunities/new">Add Opportunity</a></li>
+                        <!-- <li><a href="go">Contact</a></li> -->
+                        <li><a href="waitlist">Waitlist</a></li>
+                        <li><a href="waitlist" class="btn">Get Started</a></li>
+                    </ul>
+                    <i class="material-icons menu-btn">menu</i>
+            </div>
     <div class="content">
         <div class="main-content">
             <a href="go" class="back">&lsaquo; Back to Opportunities</a>
@@ -146,3 +173,4 @@
         </div>
     </div>
 </div>
+</main>

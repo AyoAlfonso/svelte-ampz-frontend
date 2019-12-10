@@ -13,7 +13,7 @@
 	<!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins&display=swap'> -->
 	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'> -->
 	<link rel='manifest' href='manifest.json'>
-	<link rel='icon' type='image/png' href='favicon.png'>
+	<link rel='icon' type='image/png' href='img/logo.png'>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -24,11 +24,16 @@
 	     the current page has one -->
 	%sapper.head%
 </head>
+<style>
+	.noir-bg{
+    background-color: #000;
+}
+</style>
 
-<body>
+<body >
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
-	<div id='sapper'>%sapper.html%</div>
+	<div class="noir-bg" id='sapper'>%sapper.html%</div>
 
 	<!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
