@@ -10,6 +10,7 @@
     
     let inProgress = false;
     let nigerianStates;
+    let opportunities_status;
     let sports;
     const toast = new Toast()
     let opportunities = [];
@@ -35,7 +36,6 @@
             if(e.target.id == 'grp_scout') { scout_bg ='#e6fae6'}
             if(e.target.id == 'grp_coach') { coach_bg ='#fff5dc'}
         }
- 
     }
 
     function simpleDate(ISOdateTime){
@@ -44,18 +44,20 @@
 
 	onMount(async () => {
 
-		inProgress = true;
+        inProgress = true;
+        opportunities_status = 'Loading ...'
         const opportunitiesRes =  await get("opportunity/list", form , null)
         const NigerianStatesRes =  await get("utils/nigerian_states", null, null)
         const SportsRes =  await post("defaultskills", null, null)
         if(opportunitiesRes) {
-            inProgress = false;
+
+
             opportunities = opportunitiesRes.data;
-              console.log(opportunities)
           opportunities =  opportunities.length > 0 ? opportunities.map(opp=>{
                opp.program_date = simpleDate(opp.program_date) 
             return opp
             }) : []
+         opportunities_status = 'No opportunities found'
         }
         if(NigerianStatesRes) {
             console.log(NigerianStatesRes)
@@ -117,6 +119,13 @@
   
 }
 
+.no-opportunity {
+    text-align: center;
+    margin: 150px;
+    color: #db9a03;
+    font-size: 18px;
+    font-weight: 800;
+}
 
 </style>
 <main class="white-bg-8">
@@ -181,8 +190,9 @@
                 <button on:click={submitSearch} class="btn">Search</button>
             </div>
         </div>
-        <div class="grid-container">
-       {#if opportunities}
+      
+     {#if opportunities.length > 0 }
+         <div class="grid-container">
         {#each opportunities as opportunity}
             <div class="item">
                 <div class="item-content">
@@ -199,21 +209,16 @@
                             <div class="clearfix"></div>
                         </div>
                     </div>
+                   </div>
+                 </div>
+                {/each}
                 </div>
-            </div>
-            {/each}
-            {/if}
-     </div>
-        <!-- <div  class="pagination">
-            <img alt="image7" src="img/arrow_right.png">
-            <p>Previous</p>
-            <p class="active">1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>Next</p>
-            <img alt="image1" src="img/arrow_left.png">
-        </div> -->
+       
+        {:else}
+	         <div class="no-opportunity"> {opportunities_status} </div>
+        {/if}
+
+   
         <div class="create">
             <div class="overlay">
                 <h3>Create Opportunities.</h3>
