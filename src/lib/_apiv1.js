@@ -2,7 +2,7 @@ import { nodeApiUrl } from './../config'
 import Cookie from 'cookie-universal'
 const cookies = Cookie()
 let tkn = cookies.get('token')
-async function send({ method, path, data, token, cookie, auxUrl }) {
+async function send({ method, path, data, params, token, cookie, auxUrl }) {
     let url = auxUrl ? auxUrl : `${nodeApiUrl}/api/${path}`;
 	const fetch = process.browser ? window.fetch : require('node-fetch').default;
 	const opts = {
@@ -19,6 +19,13 @@ async function send({ method, path, data, token, cookie, auxUrl }) {
 	if (data) {
 		// opts.headers['Content-Type'] = 'application/json';
 		opts.body = JSON.stringify(data);
+	}
+	
+	if(method=='GET' && params){
+	
+		 url += '?' + Object.keys(params).map(key => key + '=' + params[key]).join('&');
+
+
 	}
 
 	let tkn = cookies.get('token')
@@ -45,6 +52,8 @@ async function send({ method, path, data, token, cookie, auxUrl }) {
 
 function get(path, params, token, cookie) {
 	// let token = tkn || auth.token
+	console.log(params)
+	console.log("params")
 	return send({ method: 'GET', path, params, token, cookie });
 }
 

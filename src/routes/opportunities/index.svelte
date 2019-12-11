@@ -9,6 +9,8 @@
     import { onMount, afterUpdate } from "svelte";
     
     let inProgress = false;
+    let nigerianStates;
+    let sports;
     const toast = new Toast()
     let opportunities = [];
 
@@ -44,6 +46,8 @@
 
 		inProgress = true;
         const opportunitiesRes =  await get("opportunity/list", form , null)
+        const NigerianStatesRes =  await get("utils/nigerian_states", null, null)
+        const SportsRes =  await post("defaultskills", null, null)
         if(opportunitiesRes) {
             inProgress = false;
             opportunities = opportunitiesRes.data;
@@ -53,11 +57,19 @@
             return opp
             }) : []
         }
+        if(NigerianStatesRes) {
+            console.log(NigerianStatesRes)
+            nigerianStates = NigerianStatesRes
+        }
+        if(SportsRes) {
+            sports = SportsRes;
+            sports.map((sportsObj) => {sportsObj.label = sportsObj.name})
+        }
         inProgress = false;
     })
     
     afterUpdate(() => {
-        scrollToTopPage()
+        // scrollToTopPage()
     });
 
     function scrollToTopPage(){
@@ -68,6 +80,7 @@
    async function submitSearch() {
         inProgress = true
         let opts = {position: 'top-center', duration: 3000}
+        console.log(form)
         const res =  await get("opportunity/list", form, null)
         if(res.success) {
             inProgress = false
@@ -139,19 +152,33 @@
         <div class="search-form-container">
             <div class="search-form">
                 <div class="cover">
-                    <input type="text" placeholder="Search for anything">
+                    <input type="text" bind:value={form.search} placeholder="Search for anything">
                 </div>
                 <div class="cover">
-                    <select>
-                        <option value="" selected>All Locations</option>
-                    </select>
+                
+                 <select  bind:value={form.location}>
+                 {#if nigerianStates}
+                   <option value=""> Select State </option>
+                    {#each nigerianStates as nigerianState}
+                       <option value={nigerianState.state}> {nigerianState.label} </option>
+                    {/each}
+                 {/if}
+                	</select>
+
                 </div>
+
                 <div class="cover">
-                    <select class="no-border">
-                        <option value="" selected>Sport</option>
-                    </select>
+                
+                  <select  bind:value={form.sport} class="no-border">
+                    {#if sports}
+                      <option value=""> Select Sport </option>
+                        {#each sports as sport}
+                        <option value={sport.name}> {sport.name} </option>
+                        {/each}
+                    {/if}
+                	</select>
                 </div>
-                <button class="btn">Search</button>
+                <button on:click={submitSearch} class="btn">Search</button>
             </div>
         </div>
         <div class="grid-container">
@@ -177,7 +204,7 @@
             {/each}
             {/if}
      </div>
-        <div class="pagination">
+        <!-- <div  class="pagination">
             <img alt="image7" src="img/arrow_right.png">
             <p>Previous</p>
             <p class="active">1</p>
@@ -186,7 +213,7 @@
             <p>4</p>
             <p>Next</p>
             <img alt="image1" src="img/arrow_left.png">
-        </div>
+        </div> -->
         <div class="create">
             <div class="overlay">
                 <h3>Create Opportunities.</h3>

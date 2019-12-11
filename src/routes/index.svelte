@@ -80,7 +80,7 @@ border-radius: 8px;
               <h1>Discover a world of opportunities!</h1>
               <div class="mx-auto" style="font-size: 18px;">
                   <span class="d-md-block banner_p_l_r_10"> Your dream opportunity is just a profile a </span>
-                   <span class="d-md-block banner_p_l_r_10"> click away. </span>
+                   <div class="d-md-block banner_p_l_r_10"> click away. </div>
               </div>
               
              
@@ -174,13 +174,13 @@ border-radius: 8px;
                 </div>
                 <div class="mb-3 p-3">
                     <span class="checked">
-                          <img class="path" src="img/ampz/components/checkmark-vector.png">
+                          <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                     </span>
                     <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Showcase your skills </span> 
                 </div>
                 <div class="mb-3 p-3">
                     <span class="checked">
-                          <img class="path" src="img/ampz/components/checkmark-vector.png">
+                          <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                     </span>
                     <span class="white-f-x12 ml-5 pt-2" style="position: absolute;">Apply to opportunities with ease  </span> 
                 </div>
@@ -205,19 +205,19 @@ border-radius: 8px;
               <div style="margin: -15px;">
                   <div class="mb-3 p-3">
                       <span style="" class="checked">
-                            <img class="path" src="img/ampz/components/checkmark-vector.png">
+                            <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                       </span>
                       <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Promote your programmes </span> 
                   </div>
                   <div class="mb-3 p-3">
                       <span class="checked">
-                            <img class="path" src="img/ampz/components/checkmark-vector.png">
+                            <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                       </span>
                       <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Manage your team </span> 
                   </div>
                   <div class="mb-3 p-3">
                       <span class="checked">
-                            <img class="path" src="img/ampz/components/checkmark-vector.png">
+                            <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                       </span>
                       <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Stay up to date with trends </span> 
                   </div>
@@ -253,19 +253,19 @@ border-radius: 8px;
                 <div style="margin: -15px;">
                     <div class="mb-3 p-3">
                         <span class="checked">
-                              <img class="path" src="img/ampz/components/checkmark-vector.png">
+                              <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                         </span>
                         <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Access Africa’s talent pool </span> 
                     </div>
                     <div class="mb-3 p-3">
                         <span class="checked">
-                              <img class="path" src="img/ampz/components/checkmark-vector.png">
+                              <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                         </span>
                         <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Recruit effectively using data </span> 
                     </div>
                     <div class="mb-3 p-3">
                         <span class="checked">
-                              <img class="path" src="img/ampz/components/checkmark-vector.png">
+                              <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
                         </span>
                         <span class="white-f-x12 ml-5 pt-2" style="position: absolute;"> Manage your scouting portfolio</span> 
                     </div>
@@ -336,13 +336,13 @@ border-radius: 8px;
             <div class="col-md-12 col-xs-12">
           <div class="col-md-5 d-md-inline-block">
                       <div class="mb-3">
-                          <img class="path" src="img/ampz/components/football-vector.png">
+                          <img class="path" src="img/ampz/components/football-vector.png" alt="football-vector">
                       </div>
                   </div>
           
           <div class="col-md-5 d-md-inline-block">
                       <div class="mb-3">
-                          <img class="path" src="img/ampz/components/tennis-vector.png">
+                          <img class="path" src="img/ampz/components/tennis-vector.png" alt="tennis-vector">
                       </div>
                   </div>
           </div>
@@ -350,13 +350,13 @@ border-radius: 8px;
             <div class="col-md-12 col-xs-12">
                <div class="col-md-5 d-md-inline-block">
                 <div class="mb-3">
-                    <img class="path" src="img/ampz/components/boxing-gloves.png">
+                    <img class="path" src="img/ampz/components/boxing-gloves.png" alt="boxing-gloves">
                 </div>
             </div>
     
            <div class="col-md-5 d-md-inline-block">
                 <div class="mb-3">
-                    <img class="path" src="img/ampz/components/basketball-vector.png">
+                    <img class="path" src="img/ampz/components/basketball-vector.png" alt="basketball-vector">
                 </div>
             </div>
     </div>
@@ -376,8 +376,8 @@ border-radius: 8px;
                   <div class="mt-5">
                     <div>
                         <img src="img/ampz/cards/card_image_1.png" alt="">
-                        <div><a href="#">
-                        </a><div class="rect"><a href="#">
+                        <div><a href="/#">
+                        </a><div class="rect"><a href="/#">
                             <p>
                                 <span class="h5 addr">LTFC Summer Camp</span>
                             </p>
@@ -409,8 +409,8 @@ border-radius: 8px;
                     <div class="mt-5">
                       <div>
                           <img src="img/ampz/cards/card_image_1.png" alt="">
-                          <div><a href="#">
-                          </a><div class="rect"><a href="#">
+                          <div><a href="/#">
+                          </a><div class="rect"><a href="/#">
                               <p>
                                   <span class="h5 addr">Juventus Academy Pre-Season (F)</span>
                               </p>
@@ -443,8 +443,8 @@ border-radius: 8px;
                       <div class="mt-5">
                         <div>
                             <img src="img/ampz/cards/card_image_1.png" alt="">
-                            <div><a href="#">
-                            </a><div class="rect"><a href="#">
+                            <div><a href="/#">
+                            </a><div class="rect"><a href="/#">
                                 <p>
                                     <span class="h5 addr">Juventus Academy Pre-Season (G)</span>
                                 </p>

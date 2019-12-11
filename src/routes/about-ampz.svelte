@@ -72,7 +72,7 @@
                         <h1>The African Dream.</h1>
                         <div class="mx-auto" style="font-size: 18px;">
                            <span class="d-md-block banner_p_l_r_10"> “Every great dream begins with a dreamer” </span>
-                           <span class="d-md-block banner_p_l_r_10"> Harriet Tubman  </span>
+                           <div class="d-md-block banner_p_l_r_10"> Harriet Tubman  </div>
                         </div>
                      </div>
                   </div>
