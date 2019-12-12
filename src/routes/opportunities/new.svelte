@@ -360,9 +360,9 @@ async function loadFile(e) {
            <li><a href="about-ampz">About Us</a></li>
             <li><a href="product">Products</a></li>
             <li><a href="opportunities">Opportunities</a></li>
-            <li class="active" ><a href="opportunities/new">Add Opportunity</a></li>
+          
             <!-- <li><a href="go">Contact</a></li> -->
-            <li><a href="waitlist">Waitlist</a></li>
+
             <li><a href="waitlist" class="btn">Get Started</a></li>
         </ul>
         <i class="material-icons menu-btn">menu</i>

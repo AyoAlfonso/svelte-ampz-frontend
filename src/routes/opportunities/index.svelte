@@ -5,7 +5,6 @@
     import Toast from 'svelte-toast'
     import Select from 'svelte-select';
     import { get, post } from "../../lib/_apiv1";
-    // import { distanceInWordsToNow } from 'date-fn
     import { onMount, afterUpdate } from "svelte";
     
     let inProgress = false;
@@ -59,6 +58,7 @@
             }) : []
          opportunities_status = 'No opportunities found'
         }
+      
         if(NigerianStatesRes) {
             console.log(NigerianStatesRes)
             nigerianStates = NigerianStatesRes
@@ -119,6 +119,10 @@
   
 }
 
+a {
+  width: auto;
+}
+
 .no-opportunity {
     text-align: center;
     margin: 150px;
@@ -140,9 +144,9 @@
                      <li><a href="about-ampz">About Us</a></li>
                          <li><a href="product">Products</a></li>
                         <li class="active"><a href="opportunities">Opportunities</a></li>
-                        <li><a href="opportunities/new">Add Opportunity</a></li>
+                    
                         <!-- <li><a href="go">Contact</a></li> -->
-                        <li><a href="waitlist">Waitlist</a></li>
+                      
                         <li><a href="waitlist" class="btn">Get Started</a></li>
                     </ul>
                     <i class="material-icons menu-btn">menu</i>
@@ -194,23 +198,27 @@
      {#if opportunities.length > 0 }
          <div class="grid-container">
         {#each opportunities as opportunity}
-            <div class="item">
-                <div class="item-content">
-                    <div class="img img1"></div>
-                    <div class="text">
-                        <h4 class="title open-sans"> {opportunity.title}</h4>
-                        <h5 class="subtitle">{opportunity.sport} | {opportunity.location} </h5>
-                        <p class="main-text">
-                            {opportunity.description} 
-                        </p>
-                        <div class="main-text">
-                            <span class="left small"> Programme Date: {opportunity.program_date}</span>
-                            <a href={`/opportunities/`+ opportunity._id} class="right">Read More</a>
-                            <div class="clearfix"></div>
+           
+                <div class="item">
+                    <div class="item-content">
+                         <a href={"/opportunities/"+opportunity._id}>
+                        <div class="img img1"></div>
+                        <div class="text">
+                            <h4 class="title open-sans"> {opportunity.title}</h4>
+                            <h5 class="subtitle">{opportunity.sport} | {opportunity.location} </h5>
+                            <p class="main-text">
+                                {opportunity.description} 
+                            </p>
+                            <div class="main-text">
+                                <span class="left small"> Programme Date: {opportunity.program_date}</span>
+                                <a href={`/opportunities/`+ opportunity._id} class="right">Read More</a>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
+                          </a>
                     </div>
-                   </div>
-                 </div>
+                    </div>
+                     
                 {/each}
                 </div>
        

@@ -36,19 +36,16 @@
                         <li class="nav-item">
                     <a class="nav-link" href="about-ampz">About Us</a>
                   </li>
+                
                   <li class="nav-item">
-                    <a class="nav-link" href="waitlist">Product</a>
+                    <a class="nav-link" href="/waitlist">Product</a>
                   </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="opportunities">Opportunites</a>
                    
                   </li>
-                     <li class="nav-item">
-                       <a class="nav-link" href="/opportunities/new">Add Opportunity</a>
-                      </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="waitlist">Waitlist</a>
-                  </li>
+                
                         <!-- <li class="nav-item ml-3 mr-3"> -->
                         <a class="btn gold-nav-btn gold-nav-link " href="#download">Get Started</a>
                         <!-- </li> -->

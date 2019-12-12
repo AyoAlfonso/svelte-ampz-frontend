@@ -465,10 +465,13 @@ html, body {
           width: 100%; } }
       .opportunity .content .main-content .back {
         font-size: 18px;
+        font-weight: 800;
         color: #DB9A02; }
         @media screen and (max-width: 600px) {
           .opportunity .content .main-content .back {
-            font-size: 15px; } }
+            font-size: 15px;
+            font-weight: 800;
+           } }
       .opportunity .content .main-content .title {
         margin: 10px 0; }
         .opportunity .content .main-content .title h2 {

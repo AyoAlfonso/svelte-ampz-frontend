@@ -37,7 +37,7 @@
   <h1 class="errorCode">{status}</h1>
   <div style="text-align:center;color: wheat;padding: 5%;"> <a class="btn back-home" href="/">&lt; Go Home  </a>
 </div>
-  <p class="erroMsg">{error.message}</p>
+  <!-- <p class="erroMsg">{error.message}</p> -->
  
 <h2>Oops, something went wrong.</h2>
   {#if dev && error.stack}
