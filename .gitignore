@@ -4,7 +4,8 @@
 /static/index.css
 yarn-error.log
 /cypress/screenshots/
-/__sapper__/
+/__sapper__/dev
+__sapper__/export
 prod
 .env
 static/index.css
