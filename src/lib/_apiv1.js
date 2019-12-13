@@ -51,9 +51,6 @@ async function send({ method, path, data, params, token, cookie, auxUrl }) {
 }
 
 function get(path, params, token, cookie) {
-	// let token = tkn || auth.token
-	console.log(params)
-	console.log("params")
 	return send({ method: 'GET', path, params, token, cookie });
 }
 

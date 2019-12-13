@@ -1,13 +1,13 @@
 {
-  "name": "sapper-ecommerce",
+  "name": "",
   "description": "e-commerce project created using Sapper, Svelte, TailwindCSS, Rollup",
   "version": "1.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "run-p watch:tailwind sapper:dev",
-    "sapper:dev": "sapper dev --port 4602",
+    "sapper:dev": "sapper dev --port 4601",
     "export": "sapper export --legacy",
-    "start": "PORT=4400 node __sapper__/build",
+    "start": "PORT=4400 node build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
