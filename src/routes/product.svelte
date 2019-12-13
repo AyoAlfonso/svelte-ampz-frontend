@@ -219,37 +219,5 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer-content">
-            <div class="col">
-                <p class="title">Company</p>
-                <p><a href="#">About</a></p>
-                <p><a href="#">Team</a></p>
-                <p><a href="#">Careers</a></p>
-                <p><a href="#">Talent Portfolio</a></p>
-            </div>
-            <div class="col">
-                <p class="title">Products</p>
-                <p><a href="#">Platforms and Services</a></p>
-                <p><a href="#">Programs</a></p>
-                <p><a href="#">Store</a></p>
-            </div>
-            <div class="col">
-                <p class="title">Legal</p>
-                <p><a href="#">Terms and Conditions</a></p>
-            </div>
-            <div class="col">
-                <p class="title">Contact</p>
-                <p>
-                    <a href="#"><img src="img/twitter.png" alt=""></a>
-                    <a href="#"><img src="img/linkedin.png" alt=""></a>
-                    <a href="#"><img src="img/facebook.png" alt=""></a>
-                    <a href="#"><img src="img/instagram.png" alt=""></a>
-                </p>
-                <p><a href="mailto:info@ampz.tv">info@ampz.tv</a></p>
-                <p>&copy; Copyright AMPZ.TV Limited 2019</p>
-            </div>
-        </div>
-    </div>
 </div>
 </main>
