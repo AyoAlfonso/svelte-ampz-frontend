@@ -1,21 +1,44 @@
 import sirv from 'sirv';
-import polka from 'polka';
+// import polka from 'polka';
+import express from 'express'
 import compression from 'compression';
 import * as sapper from '@sapper/server';
 import { authenticationMiddleware } from './lib/auth'
 import { apiUrl } from './config'
-const dotenv = require('dotenv');
-dotenv.config({ path: '.env' });
-const { PORT, NODE_ENV, API_URL } = process.env;
+// const sslRedirect = require('heroku-ssl-redirect');
+// import sslRedirect from 'strong-ssl-redirect'
+
+let { PORT, NODE_ENV, API_URL } = process.env;
 
 const proxy = require('http-proxy-middleware');
 const apiProxy = proxy('/api', { target: API_URL || apiUrl, changeOrigin: true });
 const imgProxy = proxy('/images', { target: API_URL || apiUrl, changeOrigin: true });
 
-const dev = NODE_ENV === 'development';
-polka()
+let dev = NODE_ENV === 'development';
+
+// NODE_ENV="production"
+console.log(NODE_ENV)
+express()
 	.use(
 		compression({ threshold: 0 }),
+		async function (req, res, next) {
+			let www = 1
+			if (process.env.NODE_ENV === 'production') {
+				var host = req.header('host');
+				if (www) {
+					var correctHost = host.match(/^www\..*/i);
+					if (!correctHost) {
+						return res.redirect(301, 'https://www.' + host);
+					}
+				}
+				if (req.headers['x-forwarded-proto'] !== 'https') {
+					return res.redirect(statusCode, 'https://' + req.hostname + req.originalUrl);
+				}
+				next();
+			} else {
+				next();
+			}
+		},
 		sirv('static', { dev }),
 		apiProxy,
 		imgProxy,
@@ -26,8 +49,12 @@ polka()
 				token: req.token,
 				cart: req.cart || {},
 				settings: req.settings || {}
-			})
-		})
+			}),
+			
+		}),
+	
+		// sslRedirect('production', 301)
+		
 	)
 	.listen(PORT, err => {
 		if (err) console.log('error', err);

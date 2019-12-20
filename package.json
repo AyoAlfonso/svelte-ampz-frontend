@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "run-p watch:tailwind sapper:dev",
-    "sapper:dev": "sapper dev --port 4601",
+    "sapper:dev": "sapper dev --port 4601  ",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
@@ -28,6 +28,7 @@
     "cookie-universal": "^2.0.16",
     "date-fns": "^2.8.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "flatpickr": "^4.6.3",
     "http-proxy-middleware": "^0.20.0",
     "jquery": "^3.4.1",
