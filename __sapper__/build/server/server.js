@@ -2912,8 +2912,6 @@ const imgProxy = proxy('/images', { target: API_URL || index$2.apiUrl, changeOri
 
 let dev = NODE_ENV === 'development';
 
-// NODE_ENV="production"
-console.log(NODE_ENV);
 express()
 	.use(
 		compression({ threshold: 0 }),
@@ -2944,9 +2942,7 @@ express()
 				settings: req.settings || {}
 			}),
 			
-		}),
-	
-		// sslRedirect('production', 301)
+		})
 		
 	)
 	.listen(PORT, err => {

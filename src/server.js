@@ -16,14 +16,12 @@ const imgProxy = proxy('/images', { target: API_URL || apiUrl, changeOrigin: tru
 
 let dev = NODE_ENV === 'development';
 
-// NODE_ENV="production"
-console.log(NODE_ENV)
 express()
 	.use(
 		compression({ threshold: 0 }),
 		async function (req, res, next) {
 			let www = 1
-			if (process.env.NODE_ENV === 'production') {
+			if ('production') {
 				var host = req.header('host');
 				if (www) {
 					var correctHost = host.match(/^www\..*/i);
@@ -51,9 +49,7 @@ express()
 				settings: req.settings || {}
 			}),
 			
-		}),
-	
-		// sslRedirect('production', 301)
+		})
 		
 	)
 	.listen(PORT, err => {
