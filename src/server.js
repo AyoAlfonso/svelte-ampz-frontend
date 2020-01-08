@@ -19,28 +19,6 @@ let dev = NODE_ENV === 'development';
 express()
 	.use(
 		compression({ threshold: 0 }),
-	
-		// async function (req, res, next) {
-		// 	let www = 1
-		// 	if ('production') {
-		// 		var host = req.header('host');
-		// 		console.log(host)
-		// 		if (www) {
-		// 			var correctHost = host.match(/^www\..*/i);
-
-		// 			if (!correctHost) {
-		// 				return res.redirect(301, 'https://www.' + host);
-		// 			}
-		// 		}
-		// 		if (req.headers['x-forwarded-proto'] !== 'https') {
-		// 			console.log(statusCode, 'https://' + req.hostname + req.originalUrl)
-		// 			return res.redirect(statusCode, 'https://' + req.hostname + req.originalUrl);
-		// 		}
-		// 		next();
-		// 	} else {
-		// 		next();
-		// 	}
-		// },
 		
 		sirv('static', { dev }),
 		apiProxy,
