@@ -11,46 +11,46 @@ require('./index-7460d1f3.js');
 var index$1 = require('./index-e5c7f1ba.js');
 var _23423432opportunity = require('./#23423432opportunity-52be03d7.js');
 var _23423423products = require('./#23423423products-1e5e504f.js');
-var index$2 = require('./index-1604aca7.js');
+var index$2 = require('./index-1390c2aa.js');
 require('cookie-universal');
-require('./api-80ace8cf.js');
-var app = require('./app-1c31723f.js');
-require('./Textbox-07818637.js');
+require('./api-d6db2657.js');
+var app = require('./app-605a28d4.js');
+require('./Textbox-7c7926dd.js');
 require('./Button-eb848e8a.js');
-require('./index-f347afff.js');
-var _34234234flipkart = require('./#34234234flipkart-d12a6220.js');
+require('./index-2503b349.js');
+var _34234234flipkart = require('./#34234234flipkart-4ed5a10c.js');
 require('./index-eb724975.js');
 require('./index-c0882747.js');
 require('svelte-toast');
-require('./Select-ec03737c.js');
-require('./_apiv1-d1c76af0.js');
-var index$6 = require('./index-3a276635.js');
-var _new = require('./new-81921964.js');
+require('./Select-5b132eac.js');
+require('./_apiv1-52c62208.js');
+var index$6 = require('./index-1ce014a9.js');
+var _new = require('./new-5c4ba549.js');
 require('sha1');
-var _slug_ = require('./[slug]-efc3651f.js');
+var _slug_ = require('./[slug]-7a7b146f.js');
 require('./crossfade-0ab1fbee.js');
-var _234234login = require('./#234234login-6139fc17.js');
-require('./Passwordbox-655725d2.js');
-require('./Header-8503da6b.js');
-require('./auth-2eda1a30.js');
-require('./cart-79bd70c1.js');
+var _234234login = require('./#234234login-aaa28a8f.js');
+require('./Passwordbox-4e6c1d7d.js');
+require('./Header-29a19c30.js');
+require('./auth-74e0780c.js');
+require('./cart-fcc7c51c.js');
 var aboutAmpz = require('./about-ampz-837d3182.js');
-var index$7 = require('./index-707cc92d.js');
+var index$7 = require('./index-cf7b5b18.js');
 var product = require('./product-a14c4ade.js');
-var _43434_slug_ = require('./#43434[slug]-fad2ea68.js');
-var index$8 = require('./index-f2b9f763.js');
-require('./_CartBanners-bcdddd4a.js');
-require('./_CartItem-2156821b.js');
-var index$9 = require('./index-208c046c.js');
-var orderSuccess = require('./order-success-55327d2c.js');
-var checkout = require('./checkout-b4533b08.js');
-require('./_AccountMenu-f5e814f9.js');
-var _layout = require('./_layout-357d1d43.js');
-var index$a = require('./index-392e0b3c.js');
-var password = require('./password-af03591d.js');
-var address = require('./address-2c63c362.js');
-var profile = require('./profile-7678e78e.js');
-var orders = require('./orders-56946af3.js');
+var _43434_slug_ = require('./#43434[slug]-5a55cf06.js');
+var index$8 = require('./index-3e221c61.js');
+require('./_CartBanners-0ce4e55b.js');
+require('./_CartItem-c7f039e1.js');
+var index$9 = require('./index-82834f66.js');
+var orderSuccess = require('./order-success-055ca465.js');
+var checkout = require('./checkout-35de9043.js');
+require('./_AccountMenu-43a8f648.js');
+var _layout = require('./_layout-f585d7f6.js');
+var index$a = require('./index-04c336eb.js');
+var password = require('./password-7eec7785.js');
+var address = require('./address-74c4cf35.js');
+var profile = require('./profile-0892f74a.js');
+var orders = require('./orders-7b21e2e6.js');
 var Stream = _interopDefault(require('stream'));
 var http = _interopDefault(require('http'));
 var Url = _interopDefault(require('url'));
@@ -2901,56 +2901,37 @@ function serve({ prefix, pathname, cache_control }
 
 function noop(){}
 
-// const sslRedirect = require('heroku-ssl-redirect');
-// import sslRedirect from 'strong-ssl-redirect'
-
 let { PORT, NODE_ENV, API_URL } = process.env;
 
-const proxy = require('http-proxy-middleware');
-const apiProxy = proxy('/api', { target: API_URL || index$2.apiUrl, changeOrigin: true });
-const imgProxy = proxy('/images', { target: API_URL || index$2.apiUrl, changeOrigin: true });
+const proxy = require("http-proxy-middleware");
+const apiProxy = proxy("/api", {
+  target: API_URL || index$2.apiUrl,
+  changeOrigin: true
+});
+const imgProxy = proxy("/images", {
+  target: API_URL || index$2.apiUrl,
+  changeOrigin: true
+});
 
-let dev = NODE_ENV === 'development';
+let dev = NODE_ENV === "development";
 
 express()
-	.use(
-		compression({ threshold: 0 }),
-	
-		// async function (req, res, next) {
-		// 	let www = 1
-		// 	if ('production') {
-		// 		var host = req.header('host');
-		// 		if (www) {
-		// 			var correctHost = host.match(/^www\..*/i);
+  .use(
+    compression({ threshold: 0 }),
 
-		// 			if (!correctHost) {
-		// 				return res.redirect(301, 'https://www.' + host);
-		// 			}
-		// 		}
-		// 		if (req.headers['x-forwarded-proto'] !== 'https') {
-		// 			return res.redirect(statusCode, 'https://' + req.hostname + req.originalUrl);
-		// 		}
-		// 		next();
-		// 	} else {
-		// 		next();
-		// 	}
-		// },
-		
-		sirv('static', { dev }),
-		apiProxy,
-		imgProxy,
-		// authenticationMiddleware,
-		middleware({
-			session: (req, res) => ({
-				user: req.user || {},
-				token: req.token,
-				cart: req.cart || {},
-				settings: req.settings || {}
-			}),
-			
-		})
-		
-	)
-	.listen(PORT, err => {
-		if (err) console.log('error', err);
-	});
+    sirv("static", { dev }),
+    apiProxy,
+    imgProxy,
+    // authenticationMiddleware,
+    middleware({
+      session: (req, res) => ({
+        user: req.user || {},
+        token: req.token,
+        cart: req.cart || {},
+        settings: req.settings || {}
+      })
+    })
+  )
+  .listen(PORT, err => {
+    if (err) console.log("error", err);
+  });
