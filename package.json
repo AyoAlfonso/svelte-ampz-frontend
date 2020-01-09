@@ -22,8 +22,6 @@
   "dependencies": {
     "@beyonk/svelte-carousel": "^2.1.0",
     "@fullhuman/postcss-purgecss": "^1.3.0",
-    "cloudinary": "^1.17.0",
-    "cloudinary-direct": "^1.0.4",
     "compression": "^1.7.1",
     "cookie-universal": "^2.0.16",
     "date-fns": "^2.8.1",
