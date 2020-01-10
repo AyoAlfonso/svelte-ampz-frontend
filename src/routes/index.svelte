@@ -9,7 +9,10 @@
       <link rel="stylesheet" href="ampz/css/owl.carousel.min.css">
       <!-- style CSS -->
       <link rel="stylesheet" href="ampz/css/style.css">
-     
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          
 </svelte:head>
 
 <style>
@@ -46,104 +49,86 @@ border-radius: 8px;
                     <a class="nav-link" href="/waitlist">Product</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/opportunities">Opportunites</a>
-                   
-                  </li>
-                    
+                    <a class="nav-link" href="/opportunities">Opportunites</a>                   
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/opportunities">Contacts</a>                   
+                  </li> 
+                   <li class="nav-item">
+                    <a class="nav-link" href="/opportunities">Blogs</a>                   
+                  </li>            
                 
-                  <!-- <li class="nav-item ml-3 mr-3"> -->
-                    <a class="btn gold-nav-btn gold-nav-link " href="/waitlist">Get Started</a>
-                  <!-- </li> -->
+                    <a class="btn gold-nav-btn1 gold-nav-link " href="/waitlist">Get Started</a>
+              
                 </ul>
               </div>
             </nav>
           </div>
-        </div>
-    <div class="container">
-      
-    </div>
+        </div>    
   </header>
   <!-- Header part end-->
 
-  <!-- banner part start-->
-  <section class="banner_part">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="mx-auto text-center">
-          <div class="banner_text">
-            <div class="banner_text_iner">
-              <h5 class="mx-auto gold_test"> CONNECTING TALENTS</h5>
-              <h1>Discover a world of opportunities!</h1>
-              <div class="mx-auto" style="font-size: 18px;">
-                  <span class="d-md-block banner_p_l_r_10"> Your dream opportunity is just a profile a </span>
-                   <div class="d-md-block banner_p_l_r_10"> click away. </div>
-              </div>
-              
-             
-            </div>
+  <!-- SLide start-->
+  <section>       
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>CONNECTING TALENTS</h5>
+            <p>Discover a world of opportunities!</p>
+            <p class="p2">Your dream opportunity is just a profile and a<br/> click away.</p>
           </div>
+            <img src="img/ampz/Group 48.png" alt="..."/>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+             <h5>BOOSTING ACADEMICS</h5>
+             <p>Promote your programmes!</p>
+             <p class="p2">Attract more promising talents from our<br/> fast-growing pool.</p>
+          </div>
+            <img src="img/ampz/Group 49.png" alt="..."/>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>SIMPLYING SCOUTING</h5>
+            <p>Recruit from Africa!</p>
+            <p class="p2">Let's help you find your next top-shot using data<br/> driven processess.</p>
+          </div>
+            <img src="img/ampz/Group 50.png" alt="..."/>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </section>
-  <!-- banner part start-->
+<!-- SLide end-->
 
-  <!--::client logo part end::-->
-  <section class="client_logo">
-    <div class="container">
-      <div class="row align-items-center partner_logo_p">
-        <div class="col-lg-12">
-          <div class="client_logo_slider owl-carousel d-flex justify-content-between owl-loaded owl-drag">
-            
-          <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1155px, 0px, 0px); transition: all 0s ease 0s; width: 3658px;"><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo2.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo3.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo4.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo5.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo6.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo1.png" alt="">
-            </div></div><div class="owl-item cloned c" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo1.png" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/ampz/partner_logo/juventus-inverted.png" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/ampz/partner_logo/qvt_media.jpg" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/ampz/partner_logo/hygeia-inverted.png" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/ampz/partner_logo/mpac-sports-inverted.png" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/ampz/partner_logo/the-future-academy-inverted.png" alt="">
-            </div></div><div class="owl-item active" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo6.png" alt="">
-            </div></div><div class="owl-item" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo1.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo1.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo2.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo3.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo4.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo5.png" alt="">
-            </div></div><div class="owl-item cloned" style="width: 177.5px; margin-right: 15px;"><div class="single_client_logo">
-              <img src="img/logo/Logo6.png" alt="">
-            </div></div></div></div>
-            <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--::client logo part end::-->
+  <!--::partners start::-->
+ <section id="partners" class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">   </div>
+      <div class="col-md-2">  <img src="img/ampz/Group.png" alt="partner logo">  </div>
+      <div class="col-md-2"> <img src="img/ampz/Group(1).png" alt="partner logo">  </div>
+      <div class="col-md-2"> <img src="img/ampz/Group(2).png" alt="partner logo">    </div>
+      <div class="col-md-2"> <img src="img/ampz/Group(3).png" alt="partner logo">    </div>
+      <div class="col-md-2"> <img src="img/ampz/Group(4).png" alt="partner logo">    </div>
+      <div class="col-md-1">   </div>
+    </div> 
+ </section>
+ <!--::partners end::-->
 
-  <!-- about part start-->
+  <!-- user category start-->
   <section class="about_part section_padding">
     <div class="container">
         <div class="mx-auto gold_test"> <span> Let's win together </span> </div>
@@ -151,17 +136,17 @@ border-radius: 8px;
       <div class="row justify-content-between mt-5 pb-5 pt-5">
         <div class="col-md-6">
             <div class="about_part_img">
-              <img class="img-rd-8" src="img/ampz/B_ball_Talents.jpeg" alt="">
+              <img class="img-rd-8" src="img/ampz/Rectangle 23.png" alt="">
             </div>
           </div>
-        <div class="col-md-6">
+        <div class="col-md-6 push">
           <div style="margin-top: -1px;" class="white-f-x20 about_part_txt"> Talent </div>
           <div class="about_part_text">
             <p class="white-f-x14">
                 We are connecting African sports talents to a world of verified opportunities by leveraging on technology.
             </p>
 
-            <div style="margin: -15px;">
+            <div class="push2">
                 <div class="mb-3 p-3">
                     <span class="checked">
                           <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
@@ -191,14 +176,14 @@ border-radius: 8px;
 
       <div class="row justify-content-between mt-5 pb-5 pt-5">
          
-          <div class="col-md-6">
+          <div class="col-md-6 push">
             <div style="margin-top: -1px;" class="white-f-x20 about_part_txt"> Coach & Academy </div>
             <div class="about_part_text">
               <p class="white-f-x14">
-                Do you want to amplify your reach andewe get your dream team organized? 
+                Do you want to amplify your reach and get your dream team organized? 
               </p>
   
-              <div style="margin: -15px;">
+              <div class="push2">
                   <div class="mb-3 p-3">
                       <span style="" class="checked">
                             <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
@@ -227,7 +212,7 @@ border-radius: 8px;
 
           <div class="col-md-6">
               <div class="about_part_img">
-                <img class="img-rd-8" src="img/ampz/IMG_9366.jpg" alt="">
+                <img class="img-rd-8" src="img/ampz/aca.png" alt="">
               </div>
             </div>
         </div>
@@ -235,18 +220,18 @@ border-radius: 8px;
         <div class="row justify-content-between mt-5 pb-5 pt-5">
             <div class="col-md-6">
                 <div class="about_part_img">
-                  <img  class="img-rd-8" src="img/ampz/scout_persona.jpg" alt="">
+                  <img  class="img-rd-8" src="img/ampz/Rectangle 23(1).png" alt="">
                 </div>
               </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 push">
               <div style="margin-top: -1px;" class="white-f-x20 about_part_txt"> Scout & Club </div>
               <div class="about_part_text">
                 <p class="white-f-x14">
                   We are making scouting in Africa easier. Now you can own your process.
                 </p>
     
-                <div style="margin: -15px;">
+                <div class="push2">
                     <div class="mb-3 p-3">
                         <span class="checked">
                               <img class="path" src="img/ampz/components/checkmark-vector.png" alt="checkmark-vector">
@@ -276,94 +261,120 @@ border-radius: 8px;
           </div>
     </div>
   </section>
-  <!-- about part end-->
-
-  <section class="">
-      <div style="background-color:#5F0000; color:#fff" class="row">
-        <!-- <div style class="row"> -->
-          <div class="col-md-3 col-sm-2 col-lg-4 col-xl-2" style="background-color: black;">
-            
-          </div>
-          <div class=" col-md-9 col-sm-10 col-lg-8 col-xl-10">
-            <div class="col-md-8 d-md-inline-block">
-                <div class="white-f-x28 m-5 pt-5 pb-5"> Are you next? </div>
-                <div class="row white-f-x16 m-5 pt-2 pb-5">
-                    <div class="col-xs-12 col-md-4 col-sm-2 gray mb-1 pt-1 pd-1">
-                      <div class="stats-line-y">  </div>
-                      <span class="white-f-x28 d-md-block">200+ </span>
-                      <span class="d-md-block"> Talents Profiled </span>    
-    
-                    </div>
-    
-                  <div class="col-xs-12 col-md-4 col-sm-2 gray mb-1 pt-1 pd-1">
-                    <div class="stats-line-y">  </div>
-                    <span class="white-f-x28 d-md-block">02+ </span>
-                    <span class="d-md-block"> Scouts &amp; Clubs </span>    
-                  </div>
-              
-                  <div class="col-xs-12 col-md-4 col-sm-2 gray"></div>
-    
-                    <div class="col-xs-12 col-md-4 col-sm-2 gray mb-1 pt-1 pd-1">
-                      <div class="stats-line-y">  </div>
-                      <span class="white-f-x28 d-md-block">50+ </span>
-                    <span class="d-md-block"> Talent Matched </span>     
-                    </div>
-    
-                    <div class="col-xs-12 col-md-4 col-sm-2 gray mb-1 pt-1 pd-1">
-                      <div class="stats-line-y">  </div>
-                  
-                      <span class="white-f-x28 d-md-block">490+ </span>
-                      <span class="d-md-block"> Opportunities Promoted </span>     
-                    </div>
-    
-                    <div class="col-xs-12 col-md-4 col-sm-2 gray mb-1 pt-1 pd-1">
-                        <div class="stats-line-y">  </div>
-                        <span class="white-f-x28 d-md-block">03+ </span>
-                        <span class="d-md-block"> Coaches &amp; Academies </span>    
-                    </div>
-
-                    <div>
-                        <a class="btn gold-nav-btn gold-nav-link gold-nav-btnx2 ml-2 mt-5" href="/waitlist">Get Started</a>
-                     </div>
-    
-                  </div>
-            </div>
-            <div class="col-md-3 d-md-inline-block">
-            <div class="col-md-12 col-xs-12">
-          <div class="col-md-5 d-md-inline-block">
-                      <div class="mb-3">
-                          <img class="path" src="img/ampz/components/football-vector.png" alt="football-vector">
-                      </div>
-                  </div>
-          
-          <div class="col-md-5 d-md-inline-block">
-                      <div class="mb-3">
-                          <img class="path" src="img/ampz/components/tennis-vector.png" alt="tennis-vector">
-                      </div>
-                  </div>
-          </div>
-            
-            <div class="col-md-12 col-xs-12">
-               <div class="col-md-5 d-md-inline-block">
-                <div class="mb-3">
-                    <img class="path" src="img/ampz/components/boxing-gloves.png" alt="boxing-gloves">
-                </div>
-            </div>
-    
-           <div class="col-md-5 d-md-inline-block">
-                <div class="mb-3">
-                    <img class="path" src="img/ampz/components/basketball-vector.png" alt="basketball-vector">
-                </div>
-            </div>
-    </div>
-            
-          </div>  
-          </div>
-
+ <!-- user category end-->
+  <section id="next" class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
       </div>
-    </section>
-
-    <section class="our_service mt-5 pt-5 noir-black-8">
+      <div class="col-md-11 partTwo">
+        <div class="row">
+          <div class="col-md-7 me">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Are you next?</h2>
+              </div>
+            </div>
+            <div class="row push3">
+              <div class="col-md-4">
+                <hr/>
+                <h3>200+</h3>
+                <p>Talents Profited</p>
+              </div>
+              <div class="col-md-4">
+                <hr/>
+                <h3>02+</h3>
+                <p>Scouts and Clubs</p>
+              </div>
+              <div class="col-md-4">
+              </div>
+            </div>
+            <div class="row push3">
+              <div class="col-md-4">
+                <hr/>
+                <h3>50+</h3>
+                <p>Talents Matched</p>
+              </div>
+              <div class="col-md-4">
+                <hr/>
+                <h3>490+</h3>
+                <p>Oppurtunities Promoted</p>
+              </div>
+              <div class="col-md-4">
+                <hr/>
+                <h3>03+</h3>
+                <p>Coaches and Academies</p>
+              </div>
+            </div>
+             <div class="row push3">
+              <div class="col-md-12">
+                 <a class="btn gold-nav-btn gold-nav-link gold-nav-btnx2 mt-5" href="/">Get Started</a>
+              </div>             
+            </div>
+          </div>
+          <div class="col-md-5 partThree">
+            <div class="row">
+              <div class="col-md-1">     </div>
+              <div class="col-md-5 push6"> 
+                <div class="row">
+                  <div class="col-md-12">
+                     <img src="img/ampz/Vector(3).png" alt="Football"/>
+                  </div>
+                </div>
+                <div class="row push5">
+                  <div class="col-md-12">
+                     <p>Football</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 push6"> 
+                <div class="row">
+                  <div class="col-md-12">
+                     <img src="img/ampz/Vector(4).png" alt="Tennis"/>
+                  </div>
+                </div>
+                <div class="row push5">
+                  <div class="col-md-12">
+                     <p>Basketball</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1">     </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1">     </div>
+              <div class="col-md-5 push6"> 
+                <div class="row">
+                  <div class="col-md-12">
+                     <img src="img/ampz/Vector(4).png" alt="boxing"/>
+                  </div>
+                </div>
+                <div class="row push5">
+                  <div class="col-md-12">
+                     <p>Basketball</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 push6"> 
+                <div class="row">
+                  <div class="col-md-12">
+                     <img src="img/ampz/Vector(3).png" alt="basketball"/>
+                  </div>
+                </div>
+                <div class="row push5">
+                  <div class="col-md-12">
+                     <p>Football</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1">     </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section class="our_service mt-5 pt-5 noir-black-8">
         <div class="container">
           <div class="mx-auto gold_test"> <span>Got what it takes? </span> </div>
           <div class="mx-auto banner_p_l_r_10"> <span class="white-f-x28" style="word-spacing: 3px;">Take on your next challenge. </span> </div>
@@ -473,8 +484,7 @@ border-radius: 8px;
             </div>
       </div>
     </section>
-
-  <!-- our_service start-->
+  
   <section style="display: none;" class="our_service">
     <div class="container">
      
