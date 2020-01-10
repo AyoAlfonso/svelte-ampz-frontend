@@ -18,6 +18,7 @@
         search: '',
         location : '' ,
         sport: '',
+        status: 'approved'
     }
 
   	function enter(e) {
