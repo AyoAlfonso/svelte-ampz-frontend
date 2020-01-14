@@ -5,34 +5,14 @@
 } */
 
 @font-face {
-  font-family: CircularStd-Regular;
-  src: url('../fonts/circularstd/circularstd-regular.ttf');
+  font-family: font1;
+  src: url('../fonts/segoeuibold.ttf');
 }
 
 
 @font-face {
-  font-family: CircularStd-Black;
-  src: url('../fonts/circularstd/CircularStd-Black.woff');
-}
-
-@font-face {
-  font-family: CircularStd-BlackItalic;
-  src: url('../fonts/circularstd/CircularStd-BlackItalic.ttf');
-}
-
-@font-face {
-  font-family: CircularStd-Bold;
-  src: url('../fonts/circularstd/CircularStd-Bold.ttf');
-}
-
-@font-face {
-  font-family: CircularStd-Medium;
-  src: url('../fonts/circularstd/CircularStd-Medium.ttf');
-}
-
-@font-face {
-  font-family: CircularStd-Book;
-  src: url('../fonts/circularstd/CircularStd-Book.ttf');
+  font-family: font2;
+  src: url('../fonts/segoeuil.ttf');
 }
 
 
@@ -40,12 +20,94 @@
 /**************** extend css start ****************/
 /**************** common css start ****************/
 body {
-  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
   font-size: 14px;
-  font-family: CircularStd-Regular;
+  font-family: font2;
   background-color: #000000;
+}
+.main_menu .navbar-brand {
+  margin-top: -9px !important;
+}
+.carousel-caption {
+  top: 33% !important;  
+}
+
+.carousel-caption h5 {
+  color: #DB9A02;
+  letter-spacing:2px;
+  font-family: font1;
+}
+
+.carousel-caption p{
+  color: white;
+  font-size:46px;  
+  letter-spacing:2px;
+  margin-top:-21px;
+  font-family: font1;
+}
+#next .partTwo{
+  background:#5F0000;
+  color:white !important;
+}
+#next .partTwo .me {
+  padding: 54px 0px 54px 65px;
+}
+#next hr {
+    width: 10%;
+    border:  #DB9A02 1px solid;
+    margin-left: 0;
+}
+#next .partTwo h2{ 
+  color:white !important;
+  font-family: font1;
+}
+#next .partTwo h3{ 
+  font-family: font1;
+  margin-top: -9px;
+  letter-spacing: 2px;
+  font-size: 31px;
+}
+#next .partTwo p {
+  font-family: font2;
+  font-size: 15px;
+  color:  white;
+  margin-top: -11px;
+  letter-spacing: 1px;
+}
+#next .partThree {
+  color:#DB9A02 !important;
+  text-align:center;
+}
+#next .partThree .push5 {
+  margin-top: 27px;
+}
+#next .partThree .push6 {
+  padding: 62px 10px;
+}
+#next .partThree p{
+  color:#DB9A02 !important; 
+}
+#next .partThree img{
+  margin:auto;
+  display:block;
+}
+#next .push3 {
+  margin-top: 30px;
+}
+.carousel-caption .p2{
+  font-size:18px;  
+  margin-top:-14px;
+  line-height: 20px; 
+  font-family: font2;
+}
+#partners>.row{
+  padding: 87px 10px;
+}
+
+#partners img{
+  margin:auto;
+  display:block;
 }
 
 .message_submit_form:focus {
@@ -61,7 +123,7 @@ input:hover, input:focus {
 }
 
 .section_padding {
-  padding: 140px 0px;
+  padding: 27px 100px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .section_padding {
@@ -1632,7 +1694,7 @@ ul {
 .main_menu {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 97%;
   z-index: 99;
 }
 .main_menu .navbar-brand {
@@ -1698,34 +1760,56 @@ ul {
   border-radius: 3px;
   padding: 10px;
   margin: 0px 15px 0px 15px;
+  margin-top: 25px !important;
  }
-
+ .gold-nav-btn1 {
+  background: #DB9A02;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0px 15px 0px 15px; 
+}
+.navbar-expand-lg .navbar-nav {   
+    margin-left: 212px !important;
+}
  .gold-nav-btnx2 {
   padding: 15px 20px 15px 20px;
   margin: 5% 15px 5% 0px;
  }
- .white-f-x12{
-  font-size: 12px;
-  color:#EFF4FD;
+ .white-f-x12 {
+  font-size: 16px;
+  color: #EFF4FD;
+  margin-top: -11px;
 }
 
 .white-f-x14{
   font-size: 14px;
+  line-height: 30px;
   color:#EFF4FD;
+  font-family: font2;
 }
 .white-f-x16{
   font-size: 16px;
   color:#EFF4FD;
 }
-
+.push {
+  padding: 1px 1px 1px 63px;
+}
+.push2 { 
+  margin-left: -17px;  
+  margin-top: 7px;
+}
 .white-f-x18{
   font-size: 18px;
   color:#EFF4FD;
 }
 
-.white-f-x20{
-  font-size: 20px;
-  color:#EFF4FD;
+.white-f-x20 {
+  font-size: 30px;
+  color: #EFF4FD;
+  font-family: font1;
+}
+.about_part_text {
+  padding-right: 47px;
 }
 
 .white-f-x24{
@@ -1736,6 +1820,7 @@ ul {
 .white-f-x28{
   font-size: 28px;
   color:#EFF4FD;
+  font-family: font1;
 }
 
 .stats-line-y {
@@ -1797,7 +1882,7 @@ ul {
 
 .job-wrapper .rect span{
   display: inline-grid;
-  font-weight: bold;
+  font-family:font1;
   color: #071013;
 }
 
@@ -2367,8 +2452,8 @@ ul {
     line-height: 40px;
   }
 }
-.about_part .about_part_text p {
-  margin: 10px 0px 10px 0px;
+.about_part .about_part_text p {  
+  font-size: 20px;
 }
 @media (max-width: 991px) {
   .about_part .about_part_text p {
