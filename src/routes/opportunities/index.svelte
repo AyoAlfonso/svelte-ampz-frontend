@@ -83,7 +83,6 @@
    async function submitSearch() {
         inProgress = true
         let opts = {position: 'top-center', duration: 3000}
-        console.log(form)
         const res =  await get("opportunity/list", form, null)
         if(res.success) {
             inProgress = false

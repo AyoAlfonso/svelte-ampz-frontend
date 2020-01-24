@@ -6,6 +6,7 @@ yarn-error.log
 /cypress/screenshots/
 /__sapper__/dev
 __sapper__/export
+__sapper__/build
 prod
 .env
 static/index.css
