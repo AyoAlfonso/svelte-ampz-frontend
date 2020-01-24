@@ -7,7 +7,7 @@
     "dev": "run-p watch:tailwind sapper:dev",
     "sapper:dev": "sapper dev --port 4601  ",
     "export": "sapper export --legacy",
-    "prestart": "yarn build",
+    "prestart": "npm run-script build",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
