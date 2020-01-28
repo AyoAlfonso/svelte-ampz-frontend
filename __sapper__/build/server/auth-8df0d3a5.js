@@ -4,6 +4,6 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var Cookie = _interopDefault(require('cookie-universal'));
 require('./api-3a84b6e0.js');
-require('./app-dbb18491.js');
+require('./app-5677141c.js');
 
 const cookies = Cookie();

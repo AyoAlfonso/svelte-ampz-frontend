@@ -3,7 +3,7 @@
 var index = require('./index-7460d1f3.js');
 require('./index-1dcc0b48.js');
 require('cookie-universal');
-var app = require('./app-dbb18491.js');
+var app$1 = require('./app-5677141c.js');
 require('./index-eb724975.js');
 require('./index-c0882747.js');
 var _apiv1 = require('./_apiv1-67fe9ef2.js');
@@ -40,7 +40,7 @@ const css = {
 
 const U5Bslugu5D = index.create_ssr_component(($$result, $$props, $$bindings, $$slots) => {
 	let $page;
-	const { page } = app.stores$1();
+	const { page } = app$1.stores$1();
 	$page = index.get_store_value(page);
 	const { slug } = $page.params;
 	let opportunity;

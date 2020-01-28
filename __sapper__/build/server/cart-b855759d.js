@@ -4,11 +4,11 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var Cookie = _interopDefault(require('cookie-universal'));
 var api = require('./api-3a84b6e0.js');
-var app = require('./app-dbb18491.js');
+var app$1 = require('./app-5677141c.js');
 
 const cookies = Cookie();
 function getCart() {
-    const { subscribe, set } = app.writable({
+    const { subscribe, set } = app$1.writable({
         items: [],
         qty: 0,
         subtotal: 0,

@@ -4,7 +4,7 @@ var index = require('./index-7460d1f3.js');
 require('./index-1dcc0b48.js');
 require('cookie-universal');
 require('./api-3a84b6e0.js');
-require('./app-dbb18491.js');
+require('./app-5677141c.js');
 var Textbox = require('./Textbox-51d4385a.js');
 var Button = require('./Button-eb848e8a.js');
 var index$3 = require('./index-89360df8.js');

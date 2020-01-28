@@ -14,11 +14,11 @@ var _23423423products = require('./#23423423products-1e5e504f.js');
 var index$2 = require('./index-1dcc0b48.js');
 require('cookie-universal');
 require('./api-3a84b6e0.js');
-var app = require('./app-dbb18491.js');
+var app$1 = require('./app-5677141c.js');
 require('./Textbox-51d4385a.js');
 require('./Button-eb848e8a.js');
 require('./index-89360df8.js');
-var _34234234flipkart = require('./#34234234flipkart-8dfba55f.js');
+var _34234234flipkart = require('./#34234234flipkart-32900546.js');
 require('./index-eb724975.js');
 require('./index-c0882747.js');
 require('svelte-toast');
@@ -27,30 +27,30 @@ require('./_apiv1-67fe9ef2.js');
 var index$6 = require('./index-0cd0c523.js');
 var _new = require('./new-5fec314b.js');
 require('sha1');
-var _slug_ = require('./[slug]-65feef98.js');
+var _slug_ = require('./[slug]-bf4ac3ea.js');
 require('./crossfade-0ab1fbee.js');
-var _234234login = require('./#234234login-5331fa51.js');
+var _234234login = require('./#234234login-f95f727b.js');
 require('./Passwordbox-5cc6423f.js');
-require('./Header-96cac379.js');
-require('./auth-a9611a60.js');
-require('./cart-e2496602.js');
+require('./Header-78a7c3d4.js');
+require('./auth-8df0d3a5.js');
+require('./cart-b855759d.js');
 var aboutAmpz = require('./about-ampz-837d3182.js');
 var index$7 = require('./index-4750a4ea.js');
 var product = require('./product-a14c4ade.js');
-var _43434_slug_ = require('./#43434[slug]-227da296.js');
-var index$8 = require('./index-d046cb47.js');
-require('./_CartBanners-768af6a8.js');
-require('./_CartItem-31b72cc4.js');
-var index$9 = require('./index-279b2986.js');
-var orderSuccess = require('./order-success-cafb45f8.js');
-var checkout = require('./checkout-28aca296.js');
-require('./_AccountMenu-926f34d1.js');
-var _layout = require('./_layout-a5b6bf0d.js');
-var index$a = require('./index-0218da72.js');
-var password = require('./password-f98afe54.js');
-var address = require('./address-07017c45.js');
-var profile = require('./profile-6e34f4c1.js');
-var orders = require('./orders-cbe335ad.js');
+var _43434_slug_ = require('./#43434[slug]-87a372f4.js');
+var index$8 = require('./index-f2f967dd.js');
+require('./_CartBanners-20a64cf1.js');
+require('./_CartItem-0d5193e3.js');
+var index$9 = require('./index-3166d51b.js');
+var orderSuccess = require('./order-success-cf1399a4.js');
+var checkout = require('./checkout-befe20ba.js');
+require('./_AccountMenu-8d09fa71.js');
+var _layout = require('./_layout-4dafdf30.js');
+var index$a = require('./index-cb015c20.js');
+var password = require('./password-a2c52ee2.js');
+var address = require('./address-2aa0f57e.js');
+var profile = require('./profile-a218fae8.js');
+var orders = require('./orders-aab163f8.js');
 var Stream = _interopDefault(require('stream'));
 var http = _interopDefault(require('http'));
 var Url = _interopDefault(require('url'));
@@ -268,9 +268,9 @@ const manifest = {
 		}
 	],
 
-	root: app.root,
+	root: app$1.root,
 	root_preload: () => {},
-	error: app.error
+	error: app$1.error
 };
 
 const build_dir = "__sapper__/build";
@@ -2606,7 +2606,7 @@ function get_page_handler(
 			const props = {
 				stores: {
 					page: {
-						subscribe: app.writable({
+						subscribe: app$1.writable({
 							host: req.headers.host,
 							path: req.path,
 							query: req.query,
@@ -2614,9 +2614,9 @@ function get_page_handler(
 						}).subscribe
 					},
 					preloading: {
-						subscribe: app.writable(null).subscribe
+						subscribe: app$1.writable(null).subscribe
 					},
-					session: app.writable(session)
+					session: app$1.writable(session)
 				},
 				segments: layout_segments,
 				status: error ? status : 200,
@@ -2644,7 +2644,7 @@ function get_page_handler(
 				}
 			}
 
-			const { html, head, css } = app.App.render(props);
+			const { html, head, css } = app$1.App.render(props);
 
 			const serialized = {
 				preloaded: `[${preloaded.map(data => try_serialize(data)).join(',')}]`,
@@ -2914,8 +2914,30 @@ const imgProxy = proxy("/images", {
 });
 
 let dev = NODE_ENV === "development";
+let app = express();
 
-express()
+app.use(async function(req, res, next) {
+  if (req) {
+    var host = req.header("host");
+    {
+      var correctHost = host.match(/^www\..*/i);
+      if (!correctHost) {
+        return res.redirect(301, "https://www." + host);
+      }
+    }
+    if (req.headers["x-forwarded-proto"] !== "https") {
+      return res.redirect(
+        statusCode,
+        "https://" + req.hostname + req.originalUrl
+      );
+    }
+    next();
+  } else {
+    next();
+  }
+});
+
+app
   .use(
     compression({ threshold: 0 }),
 
@@ -2932,6 +2954,7 @@ express()
       })
     })
   )
+
   .listen(PORT, err => {
     if (err) console.log("error", err);
   });
