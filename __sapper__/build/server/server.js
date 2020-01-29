@@ -2916,18 +2916,12 @@ const imgProxy = proxy("/images", {
 let dev = NODE_ENV === "development";
 let app = express();
 
+
 app.use(async function(req, res, next) {
   if (req) {
-    var host = req.header("host");
-    {
-      var correctHost = host.match(/^www\..*/i);
-      if (!correctHost) {
-        return res.redirect(301, "https://www." + host);
-      }
-    }
     if (req.headers["x-forwarded-proto"] !== "https") {
       return res.redirect(
-        statusCode,
+        301,
         "https://" + req.hostname + req.originalUrl
       );
     }
