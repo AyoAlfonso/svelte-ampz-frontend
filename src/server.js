@@ -21,7 +21,6 @@ const imgProxy = proxy("/images", {
 let dev = NODE_ENV === "development";
 let app = express();
 
-
 app.use(async function(req, res, next) {
   if (req) {
     if (req.headers["x-forwarded-proto"] !== "https") {
