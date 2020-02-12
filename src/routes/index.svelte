@@ -83,7 +83,7 @@ border-radius: 8px;
             <p>Discover a world of opportunities!</p>
             <p class="p2">Your dream opportunity is just a profile and a<br/> click away.</p>
           </div>
-            <img src="img/ampz/Group 48.png" alt="..."/>
+            <img src="img/ampz/Group48.png" alt="ampz"/>
         </div>
         <div class="carousel-item">
           <div class="carousel-caption d-none d-md-block">
@@ -91,7 +91,7 @@ border-radius: 8px;
              <p>Promote your programmes!</p>
              <p class="p2">Attract more promising talents from our<br/> fast-growing pool.</p>
           </div>
-            <img src="img/ampz/Group 49.png" alt="..."/>
+            <img src="img/ampz/Group49.png" alt="ampz"/>
         </div>
         <div class="carousel-item">
           <div class="carousel-caption d-none d-md-block">
@@ -99,7 +99,7 @@ border-radius: 8px;
             <p>Recruit from Africa!</p>
             <p class="p2">Let's help you find your next top-shot using data<br/> driven processess.</p>
           </div>
-            <img src="img/ampz/Group 50.png" alt="..."/>
+            <img src="img/ampz/Group50.png" alt="ampz"/>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -136,7 +136,7 @@ border-radius: 8px;
       <div class="row justify-content-between mt-5 pb-5 pt-5">
         <div class="col-md-6">
             <div class="about_part_img">
-              <img class="img-rd-8" src="img/ampz/Rectangle 23.png" alt="">
+              <img class="img-rd-8" src="img/ampz/Rectangle23.png" alt="ampz">
             </div>
           </div>
         <div class="col-md-6 push">
@@ -212,7 +212,7 @@ border-radius: 8px;
 
           <div class="col-md-6">
               <div class="about_part_img">
-                <img class="img-rd-8" src="img/ampz/aca.png" alt="">
+                <img class="img-rd-8" src="img/ampz/mya.png" alt="ampz">
               </div>
             </div>
         </div>
@@ -220,7 +220,7 @@ border-radius: 8px;
         <div class="row justify-content-between mt-5 pb-5 pt-5">
             <div class="col-md-6">
                 <div class="about_part_img">
-                  <img  class="img-rd-8" src="img/ampz/Rectangle 23(1).png" alt="">
+                  <img  class="img-rd-8" src="img/ampz/Rectangle54.png" alt="ampz">
                 </div>
               </div>
 
@@ -382,7 +382,7 @@ border-radius: 8px;
                <div class="col-sm-6 col-xl-4">
                   <div class="mt-5">
                     <div>
-                        <img src="img/ampz/cards/card_image_1.png" alt="">
+                        <img src="img/ampz/cards/card_image_1.png" alt="ampz">
                         <div><a href="/#">
                         </a><div class="rect"><a href="/#">
                             <p>
@@ -415,7 +415,7 @@ border-radius: 8px;
                 <div class="col-sm-6 col-xl-4">
                     <div class="mt-5">
                       <div>
-                          <img src="img/ampz/cards/card_image_1.png" alt="">
+                          <img src="img/ampz/cards/card_image_1.png" alt="ampz">
                           <div><a href="/#">
                           </a><div class="rect"><a href="/#">
                               <p>
@@ -449,7 +449,7 @@ border-radius: 8px;
                   <div class="col-sm-6 col-xl-4">
                       <div class="mt-5">
                         <div>
-                            <img src="img/ampz/cards/card_image_1.png" alt="">
+                            <img src="img/ampz/cards/card_image_1.png" alt="ampz">
                             <div><a href="/#">
                             </a><div class="rect"><a href="/#">
                                 <p>
